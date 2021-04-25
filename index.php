@@ -108,6 +108,7 @@ if(isset($_POST['bsimpan']))
     <th>No. Karyawan</th>
     <th>Nama</th>
     <th>Jabatan</th>
+    <th>Tanggal</th>
     <th>Aktifitas</th>
     <th>Status</th>
 </tr>
@@ -124,6 +125,7 @@ while($data = mysqli_fetch_array($tampil)) :
     <td class="text-center"><?=$data['no_kar']?></td>
     <td><?=$data['nama']?></td>
     <td><?=$data['jabatan']?></td>
+    <td><?=$data['created']?></td>
     <td><?=$data['aktifitas']?></td>
     <td class="text-center"><?=$data['keterangan']?></td>
 </tr>
