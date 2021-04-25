@@ -43,19 +43,23 @@ if(isset($_POST['bsimpan']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aktifitas Harian Karyawan</title>
+    
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 <body>
     <!-- Judul -->
-    <div class="container text-center">
+    
+    <div class="container judul text-center">
         <h1>Aktifitas Harian Karyawan</h1>
 </br>
        
     </div>
     <!-- Akhir Judul -->
     <!-- Awal form card -->
-    <div class="container">
-        <div class="card">
+    <div class="container ">
+        <div class="card shadow p-3 mb-5">
             <div class="card-header bg-primary text-white">
                 Aktivitas harian karyawan
             </div>
@@ -75,7 +79,7 @@ if(isset($_POST['bsimpan']))
                         <input type="text" name="tjabatan" class="form-control" required>
                     </div>
                     <div class="form-group col-md-2">
-                        <label>Status kehadiran</label>
+                        <label>Keterangan</label>
                         <select class="form-control" name="tketerangan">
                             <option></option>
                             <option value="WFO">WFO</option>
@@ -99,13 +103,13 @@ if(isset($_POST['bsimpan']))
 
     <!-- Awal form card -->
     <div class="container mt-5">
-        <div class="card">
+        <div class="card shadow p-3 mb-5">
             <div class="card-header bg-success text-white">
                 Report harian seluruh karyawan
             </div>
-           <div class="card-body">
-
-
+          
+        
+            <div class="card-body">
            <table class="table table-bordered table-striped">
 <tr class="text-center">
     <th>No</th>
@@ -138,9 +142,9 @@ while($data = mysqli_fetch_array($tampil)) :
 
            </table>
            </div>
-           
         </div>
     </div>
+
     <!-- Akhir form card -->
 
 
