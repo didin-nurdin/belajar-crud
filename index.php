@@ -49,6 +49,7 @@ if(isset($_POST['bsimpan']))
     <!-- Judul -->
     <div class="container text-center">
         <h1>Aktifitas Harian Karyawan</h1>
+</br>
        
     </div>
     <!-- Akhir Judul -->
@@ -56,7 +57,7 @@ if(isset($_POST['bsimpan']))
     <div class="container">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Tabel aktivitas harian
+                Aktivitas harian karyawan
             </div>
             <div class="card-body">
                 <form method="post" action="">
@@ -97,10 +98,10 @@ if(isset($_POST['bsimpan']))
 
 
     <!-- Awal form card -->
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="card">
             <div class="card-header bg-success text-white">
-                Form input data karyawan
+                Report harian seluruh karyawan
             </div>
            <div class="card-body">
 
