@@ -42,14 +42,14 @@ if(isset($_POST['bsimpan']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar CRUD dengan PHP, MYSQL dan BOOTSTRAP</title>
+    <title>Aktifitas Harian Karyawan</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
     <!-- Judul -->
     <div class="container text-center">
-        <h1>CRUD PHP, MYSQL & BOOTSTRAP</h1>
-        <h2>INPUT DATA KARYAWAN</h2>
+        <h1>Aktifitas Harian Karyawan</h1>
+       
     </div>
     <!-- Akhir Judul -->
     <!-- Awal form card -->
@@ -60,23 +60,20 @@ if(isset($_POST['bsimpan']))
             </div>
             <div class="card-body">
                 <form method="post" action="">
-                    <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
                         <label>No. Karyawan</label>
                         <input type="text" name="tnomor" class="form-control" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-4">
                         <label>Nama</label>
                         <input type="text" name="tnama" class="form-control" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-4">
                         <label>Posisi jabatan</label>
                         <input type="text" name="tjabatan" class="form-control" required>
                     </div>
-                    <div class="form-group mt-3">
-                        <label>Aktivitas hari ini</label>
-                        <textarea type="text" name="taktifitas" class="form-control" required></textarea>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-2">
                         <label>Status kehadiran</label>
                         <select class="form-control" name="tketerangan">
                             <option></option>
@@ -84,6 +81,12 @@ if(isset($_POST['bsimpan']))
                             <option value="WFH">WFH</option>
                         </select>
                     </div>
+                </div>
+                    <div class="form-group">
+                        <label>Aktivitas hari ini</label>
+                        <textarea type="text" name="taktifitas" class="form-control" required></textarea>
+                    </div>
+                    
                     <button type="submit" class="btn btn-success" name="bsimpan">Simpan</button>
                     <button type="reset" class="btn btn-danger" name="breset">Kosongkan</button>
                 </form>
