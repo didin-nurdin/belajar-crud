@@ -18,7 +18,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Form input data karyawan
+                Tabel aktivitas harian
             </div>
             <div class="card-body">
                 <form method="post" action="">
@@ -61,7 +61,30 @@
             <div class="card-header bg-success text-white">
                 Form input data karyawan
             </div>
-           
+           <div class="card-body">
+
+
+           <table class="table table-bordered table-striped">
+<tr class="text-center">
+    <th>No</th>
+    <th>No. Karyawan</th>
+    <th>Nama</th>
+    <th>Jabatan</th>
+    <th>Aktifitas</th>
+    <th>Status</th>
+</tr>
+
+<tr>
+    <td class="text-center">1</td>
+    <td class="text-center">11751</td>
+    <td>Jahida Kalinda Nurdin</td>
+    <td>Supervisor</td>
+    <td>Membuat laporan data order yang masuk per hari ini</td>
+    <td class="text-center">WFO</td>
+</tr>
+
+           </table>
+           </div>
            
         </div>
     </div>
