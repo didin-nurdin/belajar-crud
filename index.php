@@ -1,3 +1,41 @@
+<?php
+    //Koneksi Database
+    $server = "localhost";
+    $user = "root";
+    $pass = "";
+    $database = "belajar_crud";
+
+    $koneksi = mysqli_connect($server, $user, $pass, $database)or die(mysqli_error($koneksi));
+
+//jika tombol simpan di klik maka
+if(isset($_POST['bsimpan']))
+{
+    $simpan = mysqli_query($koneksi, "INSERT INTO tcrud (no_kar, nama, jabatan, aktifitas, keterangan)
+    VALUES ('$_POST[tnomor]', '$_POST[tnama]', '$_POST[tjabatan]', '$_POST[taktifitas]', '$_POST[tketerangan]')");
+
+    if($simpan) 
+    {
+        echo "<script>
+        alert ('Data kamu sukses disimpan!');
+        document.location='index.php';
+        </script>";
+    }
+
+    else
+    {
+    echo "<script>
+        alert ('Data kamu gagal disimpan!');
+        document.location='index.php';
+        </script>";
+    }
+
+}
+
+
+?> 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +78,7 @@
                     </div>
                     <div class="form-group">
                         <label>Status kehadiran</label>
-                        <select class="form-control" name="tkehadiran">
+                        <select class="form-control" name="tketerangan">
                             <option></option>
                             <option value="WFO">WFO</option>
                             <option value="WFH">WFH</option>
@@ -74,14 +112,23 @@
     <th>Status</th>
 </tr>
 
+<?php
+$no =1;
+$tampil = mysqli_query($koneksi,"SELECT * from tcrud order by id_kar desc");
+while($data = mysqli_fetch_array($tampil)) :
+
+?>
+
 <tr>
-    <td class="text-center">1</td>
-    <td class="text-center">11751</td>
-    <td>Jahida Kalinda Nurdin</td>
-    <td>Supervisor</td>
-    <td>Membuat laporan data order yang masuk per hari ini</td>
-    <td class="text-center">WFO</td>
+    <td class="text-center"><?=$no++;?></td>
+    <td class="text-center"><?=$data['no_kar']?></td>
+    <td><?=$data['nama']?></td>
+    <td><?=$data['jabatan']?></td>
+    <td><?=$data['aktifitas']?></td>
+    <td class="text-center"><?=$data['keterangan']?></td>
 </tr>
+
+<?php endwhile; // penutup perulangan while ?>
 
            </table>
            </div>
